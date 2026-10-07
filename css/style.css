@@ -1,0 +1,190 @@
+/* ==========================================
+   Color Variables (ปรับแก้สีพื้นหลังและสีธีมได้ที่นี่)
+   ========================================== */
+:root {
+  /* สีธีมหลัก */
+  --primary-color: #8B0000;      /* สีแดงหลัก */
+  
+  /* สีพื้นหลังส่วนต่างๆ */
+  --bg-main: #6c757d;           /* สีพื้นหลังหลักของเว็บ */
+  --bg-secondary: #6c757d;      /* สีพื้นหลังส่วนสลับ/เสน่ห์เฉพาะตัว (แทน bg-light) */
+  --bg-hero: #8B0000;           /* สีพื้นหลังส่วน Hero */
+  --bg-footer: #1a1a1a;         /* สีพื้นหลังส่วน Footer */
+
+  /* สีข้อความ */
+  --text-main: #1a1a1a;
+  --text-muted: #6c757d;
+}
+
+/* ==========================================
+   Global & Font Styles
+   ========================================== */
+body {
+  font-family: 'Prompt', sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  line-height: 1.6;
+}
+
+/* Custom Background Classes */
+.bg-theme-secondary {
+  background-color: var(--bg-secondary) !important;
+}
+
+.bg-theme-footer {
+  background-color: var(--bg-footer) !important;
+}
+
+/* ==========================================
+   Navigation
+   ========================================== */
+.navbar-brand span {
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #ff0000 !important;
+}
+
+/* ==========================================
+   Hero Section
+   ========================================== */
+.hero-section {
+  background-color: var(--bg-hero);
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* หากต้องการใช้สีพื้นหลังล้วน ให้ปิดหรือลบ background-image ออก */
+  background-image: url('../images/bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-title {
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 55px;
+}
+
+.mama{
+color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 55px;
+}
+
+.sk{
+    color: #ffffff;
+}
+
+.ms{color: #8B0000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    
+}
+.mf{color: #ff2400;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);}
+.dexter{
+    color: #ffc141
+    ;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-size: 55px;
+
+}
+.lovegay{  color: #ffc141
+}
+.hero-badge {
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.book-cover {
+  max-height: 395px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.book-cover:hover {
+  transform: translateY(-5px);
+}
+
+/* ==========================================
+   Feature Cards & Content Sections
+   ========================================== */
+.section-title {
+  color: var(--primary-color);
+  position: relative;
+}
+
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.border-theme {
+  border: 2px solid var(--primary-color);
+}
+
+/* ==========================================
+   Footer Section
+   ========================================== */
+.footer-quote {
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+
+/* ==========================================
+   Responsive Adjustments
+   ========================================== */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-badge {
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-quote {
+    font-size: 1.15rem !important;
+  }
+}
+
+.kodchasan-regular {
+  font-family: "Kodchasan", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.chonburi-regular {
+  font-family: "Chonburi", serif;
+  font-weight: 400;
+  font-style: normal;
+    font-size: 45px;
+}
+.chonburi {
+  font-family: "Chonburi", serif;
+  font-weight: 400;
+  font-style: normal;
+   
+}
