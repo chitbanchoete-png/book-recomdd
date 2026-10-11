@@ -3,12 +3,12 @@
    COLOR VARIABLES
 ========================================== */
 :root {
-    --primary-color: #8B0000;
+    --primary-color: #6bbeda;
     --logo-blue: #6bbeda;
 
     --bg-main: #1a1a1a;
     --bg-secondary: #ffffff;
-    --bg-hero: #8B0000;
+    --bg-hero: #6bbeda;
     --bg-footer: #6bbeda;
 
     --text-main: #1a1a1a;
