@@ -6,15 +6,17 @@
     --primary-color: #6bbeda;
     --logo-blue: #6bbeda;
 
-    --bg-main: #1a1a1a;
-    --bg-secondary: #ffffff;
+    /* สีพื้นหลังแยก Section */
+    --bg-tagline: #000000;    /* สีดำ */
+    --bg-synopsis: #0B192C;   /* สีกรมท่าเข้ม */
+
     --bg-hero: #6bbeda;
     --bg-footer: #6bbeda;
 
-    --text-main: #1a1a1a;
-    --text-muted: #ffffff;
+    /* สีข้อความสำหรับพื้นหลังกรมท่า */
+    --text-synopsis: #ffffff;  /* ตัวหนังสือหลักสีขาว */
+    --text-accent: #6BBEDA;    /* เน้นคำสีฟ้าสด */
 }
-
 /* ==========================================
    GLOBAL & FONT STYLES
 ========================================== */
@@ -679,4 +681,7 @@ html {
   100% {
     transform: rotateY(-360deg);
   }
+}
+html {
+    scroll-behavior: smooth;
 }
