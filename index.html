@@ -28,39 +28,46 @@
 
 <body>
 
-    <!-- Header & Navbar Menu -->
-    <header class="site-header bg-black sticky-top shadow-sm">
-        <nav class="navbar navbar-dark py-3">
-            <div class="container-fluid px-3 px-md-4 px-lg-5">
+<!-- Header & Navbar Menu -->
+<header class="site-header bg-black sticky-top shadow-sm">
+    <div class="container-fluid px-3 px-md-4 px-lg-5 py-3">
 
-                <!-- โลโก้ชิดซ้าย -->
-                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <img src="images/bookplus.png" alt="BookPLUS Logo" class="brand-logo">
+        <!-- แถวบน: โลโก้ซ้ายสุด - ปุ่มสามขีดขวาสุด (บรรทัดเดียวกัน 100%) -->
+        <div class="d-flex align-items-center justify-content-between">
 
-                    <span class="brand-name fw-bold text-white">
-                        Book<span class="text-logo-blue">PLUS</span>
-                    </span>
-                </a>
+            <!-- โลโก้ชิดซ้ายสุด -->
+            <a class="navbar-brand d-flex align-items-center gap-2 m-0" href="index.html">
+                <img src="images/bookplus.png" alt="BookPLUS Logo" class="brand-logo">
+                <span class="brand-name fw-bold text-white fs-4">
+                    Book<span class="text-logo-blue">PLUS</span>
+                </span>
+            </a>
 
-                <!-- เมนูชิดขวา (อ้างอิงไปที่ #about) -->
-                <div class="nav-menu d-flex flex-wrap gap-3 ms-auto">
-
-                    <a href="index.html" class="nav-link kodchasan-regular">
-                        หน้าหลัก
-                    </a>
-
-                    <a href="#about" class="nav-link kodchasan-regular">
-                        เรื่องย่อ
-                    </a>
-
-                    <a href="#14" class="nav-link kodchasan-regular">
-                        ข้อคิด
-                    </a>
-                </div>
-
+            <!-- จอใหญ่ (md ขึ้นไป): แสดงเมนูตรงนี้ขวาสุด -->
+            <div class="d-none d-md-flex align-items-center gap-4">
+                <a href="index.html" class="nav-link kodchasan-regular text-white fs-6">หน้าหลัก</a>
+                <a href="#about" class="nav-link kodchasan-regular text-white fs-6">เรื่องย่อ</a>
+                <a href="#14" class="nav-link kodchasan-regular text-white fs-6">ข้อคิด</a>
             </div>
-        </nav>
-    </header>
+
+            <!-- จอเล็ก (sm ลงไป): แสดงปุ่มสามขีดชิดขวาสุด -->
+            <button class="navbar-toggler border-0 shadow-none p-0 d-md-none text-white fs-2" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbar" aria-controls="mobileNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+        </div>
+
+        <!-- จอเล็ก (sm ลงไป): เมนูจะขยายลงมาด้านล่างเมื่อกดปุ่มสามขีด -->
+        <div class="collapse d-md-none" id="mobileNavbar">
+            <div class="d-flex flex-column text-center gap-3 pt-3">
+                <a href="index.html" class="nav-link kodchasan-regular text-white">หน้าหลัก</a>
+                <a href="#about" class="nav-link kodchasan-regular text-white">เรื่องย่อ</a>
+                <a href="#14" class="nav-link kodchasan-regular text-white">ข้อคิด</a>
+            </div>
+        </div>
+
+    </div>
+</header>
 
     <main>
         <!-- Hero Section -->
@@ -140,36 +147,30 @@
             </svg>
         </div>
 
-       <!-- เนื้อหาคำโปรย (พร้อม Animation AOS ขยับนุ่มนวล) -->
-<div class="container py-4">
-    <div class="row justify-content-center text-center">
-        <div class="col-lg-9">
-            
-            <!-- หัวข้อหลัก: ขยับลอยขึ้นจากล่างขึ้นบน -->
-            <h2 class="fw-bold mb-4" 
-                style="color: #6BBEDA; font-family: 'Chonburi', cursive;"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-once="true">
-                "เมื่อใบหน้าที่โลกมองว่า 'ผิดปกติ'<br class="d-none d-md-block"> ซ่อนหัวใจที่งดงามที่สุดไว้..."
-            </h2>
+        <!-- เนื้อหาคำโปรย (พร้อม Animation AOS ขยับนุ่มนวล) -->
+        <div class="container py-4">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-9">
 
-            <!-- ข้อความบรรยาย: ขยับลอยขึ้นตามมาอย่างนุ่มนวล (หน่วงเวลา 300ms) -->
-            <p class="lead text-light opacity-85"
-               style="line-height: 1.9; font-family: 'Kodchasan', sans-serif;"
-               data-aos="fade-up"
-               data-aos-duration="1000"
-               data-aos-delay="300"
-               data-aos-once="true">
-                มาร่วมเดินทางไปกับ ออกัสต์ พูลล์แมน เด็กชายวัย 10 ขวบผู้เกิดมาพร้อมความผิดปกติทางใบหน้า
-                กับการก้าวแรกสู่โรงเรียนที่โลกไม่ได้ใจดีกับเขาเสมอไป วรรณกรรมเยาวชนที่จะทำให้คุณเสียน้ำตา
-                เรียนรู้พลังแห่งความเมตตา
-                และการเปลี่ยนมุมมองพร้อมค้นพบความหมายที่แท้จริงของการมองเห็นกันและกันด้วยหัวใจ
-            </p>
+                    <!-- หัวข้อหลัก: ขยับลอยขึ้นจากล่างขึ้นบน -->
+                    <h2 class="fw-bold mb-4" style="color: #6BBEDA; font-family: 'Chonburi', cursive;"
+                        data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                        "เมื่อใบหน้าที่โลกมองว่า 'ผิดปกติ'<br class="d-none d-md-block"> ซ่อนหัวใจที่งดงามที่สุดไว้..."
+                    </h2>
 
+                    <!-- ข้อความบรรยาย: ขยับลอยขึ้นตามมาอย่างนุ่มนวล (หน่วงเวลา 300ms) -->
+                    <p class="lead text-light opacity-85"
+                        style="line-height: 1.9; font-family: 'Kodchasan', sans-serif;" data-aos="fade-up"
+                        data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
+                        มาร่วมเดินทางไปกับ ออกัสต์ พูลล์แมน เด็กชายวัย 10 ขวบผู้เกิดมาพร้อมความผิดปกติทางใบหน้า
+                        กับการก้าวแรกสู่โรงเรียนที่โลกไม่ได้ใจดีกับเขาเสมอไป วรรณกรรมเยาวชนที่จะทำให้คุณเสียน้ำตา
+                        เรียนรู้พลังแห่งความเมตตา
+                        และการเปลี่ยนมุมมองพร้อมค้นพบความหมายที่แท้จริงของการมองเห็นกันและกันด้วยหัวใจ
+                    </p>
+
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
     </section>
     <!-- Section: เรื่องย่อ (พร้อมภาพตรงกลางระหว่างหัวข้อกับพารากราฟ) -->
@@ -258,317 +259,353 @@
                 <img src="images/wonder.png" alt="Wonder Decor Right"
                     style="height: 2.2em; width: auto; object-fit: contain;">
             </div>
-<!-- การ์ด 4 ช่อง (Grid 2 Column) -->
-<div class="row g-4 justify-content-center">
+            <!-- การ์ด 4 ช่อง (Grid 2 Column) -->
+            <div class="row g-4 justify-content-center">
 
-    <!-- การ์ดที่ 1 -->
-    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1200">
-        <div class="p-4 rounded-4 bg-white text-dark h-100 shadow-sm d-flex align-items-center gap-3">
+                <!-- การ์ดที่ 1 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="p-4 rounded-4 bg-white text-dark h-100 shadow-sm d-flex align-items-center gap-3">
 
-            <!-- รูปภาพฝั่งซ้ายสุด -->
-            <img src="images/วัยรุ่น.png" alt="นักเรียน เด็ก และวัยรุ่น" class="flex-shrink-0"
-                style="width: 75px; height: 75px; object-fit: contain;">
+                        <!-- รูปภาพฝั่งซ้ายสุด -->
+                        <img src="images/วัยรุ่น.png" alt="นักเรียน เด็ก และวัยรุ่น" class="flex-shrink-0"
+                            style="width: 75px; height: 75px; object-fit: contain;">
 
-            <!-- ข้อความฝั่งขวา -->
-            <div>
-                <h3 class="h5 fw-bold mb-2" style="color: #0B192C;">
-                    1. นักเรียน เด็ก และวัยรุ่น
-                </h3>
-                <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8;">
-                    ช่วยปลูกฝังเรื่องการไม่กลั่นแกล้งกัน และการยอมรับความแตกต่างของผู้อื่นในสังคมโรงเรียน
-                </p>
+                        <!-- ข้อความฝั่งขวา -->
+                        <div>
+                            <h3 class="h5 fw-bold mb-2" style="color: #0B192C;">
+                                1. นักเรียน เด็ก และวัยรุ่น
+                            </h3>
+                            <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8;">
+                                ช่วยปลูกฝังเรื่องการไม่กลั่นแกล้งกัน และการยอมรับความแตกต่างของผู้อื่นในสังคมโรงเรียน
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- การ์ดที่ 2 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="p-4 rounded-4 bg-white text-dark h-100 shadow-sm d-flex align-items-center gap-3">
+
+                        <!-- รูปภาพฝั่งซ้ายสุด -->
+                        <img src="images/ครอบครัว.png" alt="พ่อแม่ ผู้ปกครอง และครูผู้สอน" class="flex-shrink-0"
+                            style="width: 75px; height: 75px; object-fit: contain;">
+
+                        <!-- ข้อความฝั่งขวา -->
+                        <div>
+                            <h3 class="h5 fw-bold mb-2" style="color: #0B192C;">
+                                2. พ่อแม่ ผู้ปกครอง และครูผู้สอน
+                            </h3>
+                            <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8;">
+                                ช่วยให้เข้าใจสภาวะจิตใจของเด็ก บทบาทสำคัญของครอบครัว
+                                และแนวทางการสร้างบรรยากาศแห่งความเห็นอกเห็นใจและความเมตตาในโรงเรียน
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- การ์ดที่ 3 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1600">
+                    <div class="p-4 rounded-4 bg-white text-dark h-100 shadow-sm d-flex align-items-center gap-3">
+
+                        <!-- รูปภาพฝั่งซ้ายสุด -->
+                        <img src="images/นักอ่าน.png" alt="นักอ่านทั่วไปที่มองหาหนังสือฮีลใจ" class="flex-shrink-0"
+                            style="width: 75px; height: 75px; object-fit: contain;">
+
+                        <!-- ข้อความฝั่งขวา -->
+                        <div>
+                            <h3 class="h5 fw-bold mb-2" style="color: #0B192C;">
+                                3. นักอ่านทั่วไปที่มองหาหนังสือฮีลใจ
+                            </h3>
+                            <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8;">
+                                เหมาะสำหรับผู้ที่ต้องการอ่านวรรณกรรมสร้างแรงบันดาลใจ
+                                สอดแทรกแนวคิดระหว่างความถูกต้องและความเมตตา อบอุ่นหัวใจ และเติมพลังบวก
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- การ์ดที่ 4 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1800">
+                    <div class="p-4 rounded-4 bg-white text-dark h-100 shadow-sm d-flex align-items-center gap-3">
+
+                        <!-- รูปภาพฝั่งซ้ายสุด -->
+                        <img src="images/บุลลี่.png" alt="ผู้ที่กำลังเผชิญกับการกลั่นแกล้งในชีวิต" class="flex-shrink-0"
+                            style="width: 75px; height: 75px; object-fit: contain;">
+
+                        <!-- ข้อความฝั่งขวา -->
+                        <div>
+                            <h3 class="h5 fw-bold mb-2" style="color: #0B192C;">
+                                4. ผู้ที่กำลังเผชิญกับการกลั่นแกล้งในชีวิต
+                            </h3>
+                            <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8;">
+                                เพิ่มความกล้าหาญในการก้าวออกจาก Safe Zone เผชิญหน้ากับอุปสรรคใหม่ ๆ
+                                และสร้างความมั่นใจในการเป็นตัวของตัวเองอย่างภาคภูมิใจ
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
-
-        </div>
-    </div>
-
-    <!-- การ์ดที่ 2 -->
-    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1400">
-        <div class="p-4 rounded-4 bg-white text-dark h-100 shadow-sm d-flex align-items-center gap-3">
-
-            <!-- รูปภาพฝั่งซ้ายสุด -->
-            <img src="images/ครอบครัว.png" alt="พ่อแม่ ผู้ปกครอง และครูผู้สอน" class="flex-shrink-0"
-                style="width: 75px; height: 75px; object-fit: contain;">
-
-            <!-- ข้อความฝั่งขวา -->
-            <div>
-                <h3 class="h5 fw-bold mb-2" style="color: #0B192C;">
-                    2. พ่อแม่ ผู้ปกครอง และครูผู้สอน
-                </h3>
-                <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8;">
-                    ช่วยให้เข้าใจสภาวะจิตใจของเด็ก บทบาทสำคัญของครอบครัว
-                    และแนวทางการสร้างบรรยากาศแห่งความเห็นอกเห็นใจและความเมตตาในโรงเรียน
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- การ์ดที่ 3 -->
-    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1600">
-        <div class="p-4 rounded-4 bg-white text-dark h-100 shadow-sm d-flex align-items-center gap-3">
-
-            <!-- รูปภาพฝั่งซ้ายสุด -->
-            <img src="images/นักอ่าน.png" alt="นักอ่านทั่วไปที่มองหาหนังสือฮีลใจ" class="flex-shrink-0"
-                style="width: 75px; height: 75px; object-fit: contain;">
-
-            <!-- ข้อความฝั่งขวา -->
-            <div>
-                <h3 class="h5 fw-bold mb-2" style="color: #0B192C;">
-                    3. นักอ่านทั่วไปที่มองหาหนังสือฮีลใจ
-                </h3>
-                <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8;">
-                    เหมาะสำหรับผู้ที่ต้องการอ่านวรรณกรรมสร้างแรงบันดาลใจ
-                    สอดแทรกแนวคิดระหว่างความถูกต้องและความเมตตา อบอุ่นหัวใจ และเติมพลังบวก
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- การ์ดที่ 4 -->
-    <div class="col-md-6" data-aos="fade-up" data-aos-duration="1800">
-        <div class="p-4 rounded-4 bg-white text-dark h-100 shadow-sm d-flex align-items-center gap-3">
-
-            <!-- รูปภาพฝั่งซ้ายสุด -->
-            <img src="images/บุลลี่.png" alt="ผู้ที่กำลังเผชิญกับการกลั่นแกล้งในชีวิต" class="flex-shrink-0"
-                style="width: 75px; height: 75px; object-fit: contain;">
-
-            <!-- ข้อความฝั่งขวา -->
-            <div>
-                <h3 class="h5 fw-bold mb-2" style="color: #0B192C;">
-                    4. ผู้ที่กำลังเผชิญกับการกลั่นแกล้งในชีวิต
-                </h3>
-                <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8;">
-                    เพิ่มความกล้าหาญในการก้าวออกจาก Safe Zone เผชิญหน้ากับอุปสรรคใหม่ ๆ และสร้างความมั่นใจในการเป็นตัวของตัวเองอย่างภาคภูมิใจ
-                </p>
-            </div>
-
-        </div>
-    </div>
-
-</div>
     </section>
 
-<!-- Section: ต้องมีพื้นฐานอะไรไหม (พื้นหลังสีกรมท่าเข้ม #0B192C) -->
-<section id="prerequisite" class="position-relative pt-0 pb-5 overflow-hidden" style="background-color: #0B192C; color: #FFFFFF;">
-    
-    <!-- SVG คลื่นเชื่อมต่อจากเซคชั่นสีฟ้า #6BBEDA ด้านบน -->
-    <div class="w-100 overflow-hidden" style="line-height: 0; margin-bottom: -1px;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none" style="position: relative; display: block; width: 100%; height: 60px;">
-            <path d="M0,32 C360,96 1080,96 1440,32 L1440,0 L0,0 Z" fill="#6BBEDA"></path>
-        </svg>
-    </div>
+    <!-- Section: ต้องมีพื้นฐานอะไรไหม (พื้นหลังสีกรมท่าเข้ม #0B192C) -->
+    <section id="prerequisite" class="position-relative pt-0 pb-5 overflow-hidden"
+        style="background-color: #0B192C; color: #FFFFFF;">
 
-    <div class="container py-4">
-        
-        <!-- แถวบน: หัวข้อซ้าย (พร้อมรูป wonder.png ประกบซ้าย-ขวา) และข้อความฝั่งขวา -->
-        <div class="row mb-4 align-items-center text-center text-md-start g-3">
-            
-            <!-- ฝั่งซ้าย: หัวข้อหลัก (อยู่บรรทัดเดียว + ย่อขยายพอดีจอ) -->
-            <div class="col-lg-6 col-md-6">
-                <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 gap-sm-3 mb-2" data-aos="fade-right" data-aos-duration="1000">
-                    <img src="images/wonder.png" alt="Wonder Decor Left" style="height: clamp(1.5rem, 4.5vw, 2.7rem); width: auto; object-fit: contain;">
-                    <h2 class="chonburi dexter mb-0 fw-bold" style="color: #6BBEDA; font-size: clamp(1.5rem, 4.5vw, 2.7rem); white-space: nowrap; line-height: 1.2;">
-                        พื้นฐานที่จำเป็น
-                    </h2>
-                    <img src="images/wonder.png" alt="Wonder Decor Right" style="height: clamp(1.5rem, 4.5vw, 2.7rem); width: auto; object-fit: contain;">
+        <!-- SVG คลื่นเชื่อมต่อจากเซคชั่นสีฟ้า #6BBEDA ด้านบน -->
+        <div class="w-100 overflow-hidden" style="line-height: 0; margin-bottom: -1px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"
+                style="position: relative; display: block; width: 100%; height: 60px;">
+                <path d="M0,32 C360,96 1080,96 1440,32 L1440,0 L0,0 Z" fill="#6BBEDA"></path>
+            </svg>
+        </div>
+
+        <div class="container py-4">
+
+            <!-- แถวบน: หัวข้อซ้าย (พร้อมรูป wonder.png ประกบซ้าย-ขวา) และข้อความฝั่งขวา -->
+            <div class="row mb-4 align-items-center text-center text-md-start g-3">
+
+                <!-- ฝั่งซ้าย: หัวข้อหลัก (อยู่บรรทัดเดียว + ย่อขยายพอดีจอ) -->
+                <div class="col-lg-6 col-md-6">
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 gap-sm-3 mb-2"
+                        data-aos="fade-right" data-aos-duration="1000">
+                        <img src="images/wonder.png" alt="Wonder Decor Left"
+                            style="height: clamp(1.5rem, 4.5vw, 2.7rem); width: auto; object-fit: contain;">
+                        <h2 class="chonburi dexter mb-0 fw-bold"
+                            style="color: #6BBEDA; font-size: clamp(1.5rem, 4.5vw, 2.7rem); white-space: nowrap; line-height: 1.2;">
+                            พื้นฐานที่จำเป็น
+                        </h2>
+                        <img src="images/wonder.png" alt="Wonder Decor Right"
+                            style="height: clamp(1.5rem, 4.5vw, 2.7rem); width: auto; object-fit: contain;">
+                    </div>
                 </div>
+
+                <!-- ฝั่งขวา: ข้อความอธิบาย -->
+                <div class="col-lg-6 col-md-6 mt-3 mt-md-0">
+                    <h5 class="h5 fw-bold kodchasan-regular mb-0 text-white"
+                        style="line-height: 1.6; word-break: break-word;" data-aos="fade-left" data-aos-duration="1000">
+                        หนังสือเรื่อง <span style="color: #6BBEDA;">WONDER</span> ชีวิตมหัศจรรย์ของออกัสต์ <span
+                            style="color: #6BBEDA;">ไม่จำเป็นต้องมีพื้นฐานใด ๆ</span>
+                        ก่อนก็สามารถหยิบมาอ่านแล้วเข้าใจและอินตามได้ สามารถอ่านได้ง่ายและไม่ต้องเตรียมตัวล่วงหน้า
+                    </h5>
+                </div>
+
             </div>
 
-            <!-- ฝั่งขวา: ข้อความอธิบาย -->
-            <div class="col-lg-6 col-md-6 mt-3 mt-md-0">
-                <h5 class="h5 fw-bold kodchasan-regular mb-0 text-white" style="line-height: 1.6; word-break: break-word;" data-aos="fade-left" data-aos-duration="1000">
-                    หนังสือเรื่อง <span style="color: #6BBEDA;">WONDER</span> ชีวิตมหัศจรรย์ของออกัสต์ <span style="color: #6BBEDA;">ไม่จำเป็นต้องมีพื้นฐานใด ๆ</span> ก่อนก็สามารถหยิบมาอ่านแล้วเข้าใจและอินตามได้ สามารถอ่านได้ง่ายและไม่ต้องเตรียมตัวล่วงหน้า
-                </h5>
+            <!-- แถวกลาง: รูปภาพปกหนังสือฝั่งซ้าย + การ์ด 3 ชั้นฝั่งขวา -->
+            <div class="row g-4 align-items-center mb-5">
+
+                <!-- ฝั่งซ้าย: รูปปกหนังสือ WONDER -->
+                <div class="col-lg-5 col-md-5 text-center text-md-start" data-aos="zoom-in" data-aos-duration="1200">
+                    <img src="images/พื้นฐาน.png" alt="Wonder Book Cover" class="img-fluid rounded-4"
+                        style="max-height: 480px; width: 100%; object-fit: contain;">
+                </div>
+
+                <!-- ฝั่งขวา: การ์ดข้อความ 3 ชั้นสีขาว -->
+                <div class="col-lg-7 col-md-7">
+                    <div class="d-flex flex-column gap-3">
+
+                        <!-- การ์ดที่ 1 -->
+                        <div class="p-3 p-sm-4 rounded-4 bg-white text-dark shadow-sm" data-aos="fade-left"
+                            data-aos-duration="1200">
+                            <h4 class="h5 fw-bold mb-2" style="color: #0B192C; word-break: break-word;">
+                                1. เข้าใจง่าย ไม่ซับซ้อน
+                            </h4>
+                            <p class="kodchasan-regular mb-0 text-dark fw-medium"
+                                style="line-height: 1.8; word-break: break-word;">
+                                เป็นวรรณกรรมเยาวชน ที่ใช้ภาษาเป็นกันเอง เนื้อหาตรงไปตรงมาสอนข้อคิดให้กับผู้อ่าน
+                            </p>
+                        </div>
+
+                        <!-- การ์ดที่ 2 -->
+                        <div class="p-3 p-sm-4 rounded-4 bg-white text-dark shadow-sm" data-aos="fade-left"
+                            data-aos-duration="1400">
+                            <h4 class="h5 fw-bold mb-2" style="color: #0B192C; word-break: break-word;">
+                                2. เล่าผ่านมุมมองตัวละคร
+                            </h4>
+                            <p class="kodchasan-regular mb-0 text-dark fw-medium"
+                                style="line-height: 1.8; word-break: break-word;">
+                                หนังสือแบ่งบทการเล่าเรื่องผ่านสายตาของตัวละครต่าง ๆ เช่น ออกัสต์ (ตัวเอก), พี่สาว
+                                (โอลิเวีย), เพื่อนสนิท (แจ็ค วิลล์) ทำให้เราเข้าใจความรู้สึกและความคิด
+                                การเปลี่ยนมุมมองและพัฒนาการต่าง ๆ ที่แสดงให้เห็นถึงความแตกต่างของตัวละคร
+                            </p>
+                        </div>
+
+                        <!-- การ์ดที่ 3 -->
+                        <div class="p-3 p-sm-4 rounded-4 bg-white text-dark shadow-sm" data-aos="fade-left"
+                            data-aos-duration="1600">
+                            <h4 class="h5 fw-bold mb-2" style="color: #0B192C; word-break: break-word;">
+                                3. ประเด็นที่เป็นเรื่องใกล้ตัว
+                            </h4>
+                            <p class="kodchasan-regular mb-0 text-dark fw-medium"
+                                style="line-height: 1.8; word-break: break-word;">
+                                หัวข้อหลักของเรื่องเกี่ยวกับเรื่องการไปโรงเรียนวันแรก การหาเพื่อนใหม่ การถูกกลั่นแกล้ง
+                                และความสัมพันธ์ในครอบครัว ซึ่งเป็นประสบการณ์ที่ทุกคนคุ้นเคยในชีวิตประจำวันอยู่แล้ว
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- แถวล่างสุด: ข้อความสรุปปิดท้ายกึ่งกลาง -->
+            <div class="text-center pt-2 px-2" data-aos="fade-up" data-aos-duration="1800">
+                <p class="kodchasan-regular fs-5 mb-0"
+                    style="color: #6BBEDA; line-height: 1.8; word-break: break-word;">
+                    ไม่ว่าจะเป็นเด็ก วัยรุ่น พ่อแม่ หรือผู้ใหญ่ทั่วไป ก็สามารถเริ่มอ่านแล้วสนุกไปกับเรื่องราว
+                    พร้อมรับพลังบวกและความซาบซึ้งได้ในทันที
+                </p>
+            </div>
+
+        </div>
+    </section>
+    <!-- Section: ข้อคิดจากเรื่องนี้ (พื้นหลังสีเหลืองทอง #F3C623) -->
+    <section id="thought" class="position-relative pt-0 pb-5" style="background-color: #F3C623; color: #0B192C;">
+
+        <!-- SVG คลื่นเชื่อมต่อด้านบน (รับจากเซคชั่นสีกรมท่าด้านบน) -->
+        <div class="w-100 overflow-hidden" style="line-height: 0; margin-bottom: -1px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 140" preserveAspectRatio="none"
+                style="position: relative; display: block; width: 100%; height: 70px;">
+                <path d="M0,0 C320,130 1120,130 1440,0 L1440,0 L0,0 Z" fill="#0B192C"></path>
+            </svg>
+        </div>
+
+        <div class="container py-4">
+
+            <!-- หัวข้อหลัก -->
+            <div class="d-flex align-items-center justify-content-center gap-3 mb-5" data-aos="flip-left"
+                data-aos-duration="1000">
+                <img src="images/wonder.png" alt="Wonder Decor Left"
+                    style="height: 2.5em; width: auto; object-fit: contain;">
+                <h2 class="chonburi dexter text-center mb-0" style="color: #0B192C;">
+                    ข้อคิดจากเรื่องนี้
+                </h2>
+                <img src="images/wonder.png" alt="Wonder Decor Right"
+                    style="height: 2.5em; width: auto; object-fit: contain;">
+            </div>
+
+            <!-- การ์ดข้อคิด 4 ช่อง -->
+            <div class="row g-4 justify-content-center">
+
+                <!-- ข้อคิดที่ 1 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1200">
+                    <div class="p-4 rounded-4 text-white h-100 shadow d-flex align-items-center gap-3"
+                        style="background-color: #0B192C;">
+                        <img src="images/ใจดี.png" alt="Kindness Icon" class="flex-shrink-0"
+                            style="width: 75px; height: 75px; object-fit: contain;">
+                        <div>
+                            <h3 class="h5 fw-bold mb-2" style="color: #6BBEDA;">
+                                1. เลือกที่จะ "ใจดี" มากกว่าถูกต้อง
+                            </h3>
+                            <p class="kodchasan-regular mb-0 fw-medium text-white" style="line-height: 1.8;">
+                                เมื่อต้องเลือกระหว่างการทำตัวให้ถูก หรือการทำตัวให้ใจดี ให้เลือกที่จะใจดีเสมอ
+                                เพราะความเมตตากระทบจิตใจผู้คนได้ลึกซึ้งกว่า
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ข้อคิดที่ 2 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1400">
+                    <div class="p-4 rounded-4 text-white h-100 shadow d-flex align-items-center gap-3"
+                        style="background-color: #0B192C;">
+                        <img src="images/รูปลักษณ์.png" alt="Acceptance Icon" class="flex-shrink-0"
+                            style="width: 75px; height: 75px; object-fit: contain;">
+                        <div>
+                            <h3 class="h5 fw-bold mb-2" style="color: #6BBEDA;">
+                                2. มองข้ามรูปลักษณ์ภายนอก
+                            </h3>
+                            <p class="kodchasan-regular mb-0 fw-medium text-white" style="line-height: 1.8;">
+                                หน้าตาและรูปลักษณ์ไม่ใช่สิ่งตัดสินคุณค่าของคน
+                                ความสวยงามที่แท้จริงและจิตใจที่งดงามซ่อนไม่อยู่ข้างในเสมอ
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ข้อคิดที่ 3 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1600">
+                    <div class="p-4 rounded-4 text-white h-100 shadow d-flex align-items-center gap-3"
+                        style="background-color: #0B192C;">
+                        <img src="images/ความกล้า.png" alt="Courage Icon" class="flex-shrink-0"
+                            style="width: 75px; height: 75px; object-fit: contain;">
+                        <div>
+                            <h3 class="h5 fw-bold mb-2" style="color: #6BBEDA;">
+                                3. ความกล้าหาญในการเป็นตัวเอง
+                            </h3>
+                            <p class="kodchasan-regular mb-0 fw-medium text-white" style="line-height: 1.8;">
+                                การยอมรับและภาคภูมิใจในสิ่งที่ตัวเองเป็น แม้จะแตกต่างจากผู้อื่น
+                                ต้องใช้ความกล้าหาญยิ่งใหญ่
+                                เพราะทุกคนล้วนมีความแตกต่างในตัวเองและนั่นคือสิ่งที่ทำให้ทุกคนมหัศจรรย์
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ข้อคิดที่ 4 -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="1800">
+                    <div class="p-4 rounded-4 text-white h-100 shadow d-flex align-items-center gap-3"
+                        style="background-color: #0B192C;">
+                        <img src="images/อุปสรรค.png" alt="Empathy Icon" class="flex-shrink-0"
+                            style="width: 75px; height: 75px; object-fit: contain;">
+                        <div>
+                            <h3 class="h5 fw-bold mb-2" style="color: #6BBEDA;">
+                                4. ทุกคนต่างต่อสู้กับปัญหาของตัวเอง
+                            </h3>
+                            <p class="kodchasan-regular mb-0 fw-medium text-white" style="line-height: 1.8;">
+                                ทุกคนที่เราพบเจอกำลังต่อสู้กับอุปสรรคในชีวิตที่คนอื่นอาจไม่เคยรู้
+                                การเห็นอกเห็นใจกันจึงเป็นสิ่งสำคัญที่สุดในสังคม
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
 
-        <!-- แถวกลาง: รูปภาพปกหนังสือฝั่งซ้าย + การ์ด 3 ชั้นฝั่งขวา -->
-        <div class="row g-4 align-items-center mb-5">
-            
-            <!-- ฝั่งซ้าย: รูปปกหนังสือ WONDER -->
-            <div class="col-lg-5 col-md-5 text-center text-md-start" data-aos="zoom-in" data-aos-duration="1200">
-                <img src="images/พื้นฐาน.png" alt="Wonder Book Cover" class="img-fluid rounded-4" style="max-height: 480px; width: 100%; object-fit: contain;">
-            </div>
-
-            <!-- ฝั่งขวา: การ์ดข้อความ 3 ชั้นสีขาว -->
-            <div class="col-lg-7 col-md-7">
-                <div class="d-flex flex-column gap-3">
-
-                    <!-- การ์ดที่ 1 -->
-                    <div class="p-3 p-sm-4 rounded-4 bg-white text-dark shadow-sm" data-aos="fade-left" data-aos-duration="1200">
-                        <h4 class="h5 fw-bold mb-2" style="color: #0B192C; word-break: break-word;">
-                            1. เข้าใจง่าย ไม่ซับซ้อน
-                        </h4>
-                        <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8; word-break: break-word;">
-                            เป็นวรรณกรรมเยาวชน ที่ใช้ภาษาเป็นกันเอง เนื้อหาตรงไปตรงมาสอนข้อคิดให้กับผู้อ่าน
-                        </p>
-                    </div>
-
-                    <!-- การ์ดที่ 2 -->
-                    <div class="p-3 p-sm-4 rounded-4 bg-white text-dark shadow-sm" data-aos="fade-left" data-aos-duration="1400">
-                        <h4 class="h5 fw-bold mb-2" style="color: #0B192C; word-break: break-word;">
-                            2. เล่าผ่านมุมมองตัวละคร 
-                        </h4>
-                        <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8; word-break: break-word;">
-                            หนังสือแบ่งบทการเล่าเรื่องผ่านสายตาของตัวละครต่าง ๆ เช่น ออกัสต์ (ตัวเอก), พี่สาว (โอลิเวีย), เพื่อนสนิท (แจ็ค วิลล์) ทำให้เราเข้าใจความรู้สึกและความคิด การเปลี่ยนมุมมองและพัฒนาการต่าง ๆ ที่แสดงให้เห็นถึงความแตกต่างของตัวละคร
-                        </p>
-                    </div>
-
-                    <!-- การ์ดที่ 3 -->
-                    <div class="p-3 p-sm-4 rounded-4 bg-white text-dark shadow-sm" data-aos="fade-left" data-aos-duration="1600">
-                        <h4 class="h5 fw-bold mb-2" style="color: #0B192C; word-break: break-word;">
-                            3. ประเด็นที่เป็นเรื่องใกล้ตัว
-                        </h4>
-                        <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8; word-break: break-word;">
-                            หัวข้อหลักของเรื่องเกี่ยวกับเรื่องการไปโรงเรียนวันแรก การหาเพื่อนใหม่ การถูกกลั่นแกล้ง และความสัมพันธ์ในครอบครัว ซึ่งเป็นประสบการณ์ที่ทุกคนคุ้นเคยในชีวิตประจำวันอยู่แล้ว
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
+        <!-- SVG คลื่น 2 ชั้นสลับสี (เหลือง -> กรมท่า -> ฟ้า) เชื่อมไปหา Footer ด้านล่าง -->
+        <div class="w-100 overflow-hidden position-absolute bottom-0 start-0"
+            style="line-height: 0; margin-bottom: -1px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none"
+                style="position: relative; display: block; width: 100%; height: 60px;">
+                <!-- คลื่นชั้นแรก สีกรมท่า (#0B192C) เพิ่มมิติแบบ Layer -->
+                <path d="M0,32 C320,90 960,10 1440,50 L1440,120 L0,120 Z" fill="#0B192C" opacity="0.4"></path>
+                <!-- คลื่นชั้นหลัก สีฟ้า (#6BBEDA) เชื่อมลงสู่ Footer -->
+                <path d="M0,60 C480,130 960,20 1440,70 L1440,120 L0,120 Z" fill="#6BBEDA"></path>
+            </svg>
         </div>
 
-        <!-- แถวล่างสุด: ข้อความสรุปปิดท้ายกึ่งกลาง -->
-        <div class="text-center pt-2 px-2" data-aos="fade-up" data-aos-duration="1800">
-            <p class="kodchasan-regular fs-5 mb-0" style="color: #6BBEDA; line-height: 1.8; word-break: break-word;">
-               ไม่ว่าจะเป็นเด็ก วัยรุ่น พ่อแม่ หรือผู้ใหญ่ทั่วไป ก็สามารถเริ่มอ่านแล้วสนุกไปกับเรื่องราว พร้อมรับพลังบวกและความซาบซึ้งได้ในทันที
-            </p>
-        </div>
+    </section>
+    </main>
 
-    </div>
-</section>
-<!-- Section: ข้อคิดจากเรื่องนี้ (พื้นหลังสีเหลืองทอง #F3C623) -->
-<section id="thought" class="position-relative pt-0 pb-5" style="background-color: #F3C623; color: #0B192C;">
-    
-    <!-- SVG คลื่นเชื่อมต่อด้านบน (รับจากเซคชั่นสีกรมท่าด้านบน) -->
-    <div class="w-100 overflow-hidden" style="line-height: 0; margin-bottom: -1px;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 140" preserveAspectRatio="none" style="position: relative; display: block; width: 100%; height: 70px;">
-            <path d="M0,0 C320,130 1120,130 1440,0 L1440,0 L0,0 Z" fill="#0B192C"></path>
-        </svg>
-    </div>
+    <!-- Footer (พื้นหลังสีฟ้าสดใส #6BBEDA พร้อมข้อความสีกรมท่าเข้ม #0B192C คอนทราสต์อ่านง่ายผ่านเกณฑ์ WCAG) -->
+    <footer id="contact" class="py-5" style="background-color: #6BBEDA;">
+        <div class="container py-4">
+            <div class="text-center px-3 my-2">
 
-    <div class="container py-4">
-        
-        <!-- หัวข้อหลัก -->
-        <div class="d-flex align-items-center justify-content-center gap-3 mb-5" data-aos="flip-left" data-aos-duration="1000">
-            <img src="images/wonder.png" alt="Wonder Decor Left" style="height: 2.5em; width: auto; object-fit: contain;">
-            <h2 class="chonburi dexter text-center mb-0" style="color: #0B192C;">
-                ข้อคิดจากเรื่องนี้
-            </h2>
-            <img src="images/wonder.png" alt="Wonder Decor Right" style="height: 2.5em; width: auto; object-fit: contain;">
-        </div>
+                <!-- ประโยคคำคมหลัก -->
+                <p class="kodchasan-regular text-center fs-3 fw-bold mb-3" style="line-height: 1.8; color: #0B192C;"
+                    data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                    "ออกัสต์ไม่สามารถเปลี่ยนรูปลักษณ์เขาได้ แต่พวกเราอาจเปลี่ยนวิธีการมองของพวกเราได้"
+                </p>
 
-        <!-- การ์ดข้อคิด 4 ช่อง -->
-        <div class="row g-4 justify-content-center">
+                <!-- สรุปเนื้อหาเพิ่มเติม -->
+                <p class="kodchasan-regular text-center fs-4 fw-medium mb-0" style="line-height: 1.8; color: #0B192C;"
+                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true">
+                    เรื่องราวของออกัสต์ พูลล์แมน ไม่เพียงแต่วาดภาพความกล้าหาญของเด็กชายคนหนึ่ง
+                    แต่ยังเตือนใจให้พวกเราเรียนรู้ที่จะมองทะลุผ่านรูปลักษณ์ภายนอก เปิดใจยอมรับความแตกต่าง
+                    และเลือกที่จะใจดีกับผู้คนรอบข้างในทุก ๆ วัน
+                </p>
 
-            <!-- ข้อคิดที่ 1 -->
-            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1200">
-                <div class="p-4 rounded-4 text-white h-100 shadow d-flex align-items-center gap-3" style="background-color: #0B192C;">
-                    <img src="images/ใจดี.png" alt="Kindness Icon" class="flex-shrink-0" style="width: 75px; height: 75px; object-fit: contain;">
-                    <div>
-                        <h3 class="h5 fw-bold mb-2" style="color: #6BBEDA;">
-                            1. เลือกที่จะ "ใจดี" มากกว่าถูกต้อง
-                        </h3>
-                        <p class="kodchasan-regular mb-0 fw-medium text-white" style="line-height: 1.8;">
-                            เมื่อต้องเลือกระหว่างการทำตัวให้ถูก หรือการทำตัวให้ใจดี ให้เลือกที่จะใจดีเสมอ เพราะความเมตตากระทบจิตใจผู้คนได้ลึกซึ้งกว่า
-                        </p>
-                    </div>
-                </div>
             </div>
-
-            <!-- ข้อคิดที่ 2 -->
-            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1400">
-                <div class="p-4 rounded-4 text-white h-100 shadow d-flex align-items-center gap-3" style="background-color: #0B192C;">
-                    <img src="images/รูปลักษณ์.png" alt="Acceptance Icon" class="flex-shrink-0" style="width: 75px; height: 75px; object-fit: contain;">
-                    <div>
-                        <h3 class="h5 fw-bold mb-2" style="color: #6BBEDA;">
-                            2. มองข้ามรูปลักษณ์ภายนอก
-                        </h3>
-                        <p class="kodchasan-regular mb-0 fw-medium text-white" style="line-height: 1.8;">
-                            หน้าตาและรูปลักษณ์ไม่ใช่สิ่งตัดสินคุณค่าของคน ความสวยงามที่แท้จริงและจิตใจที่งดงามซ่อนไม่อยู่ข้างในเสมอ
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ข้อคิดที่ 3 -->
-            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1600">
-                <div class="p-4 rounded-4 text-white h-100 shadow d-flex align-items-center gap-3" style="background-color: #0B192C;">
-                    <img src="images/ความกล้า.png" alt="Courage Icon" class="flex-shrink-0" style="width: 75px; height: 75px; object-fit: contain;">
-                    <div>
-                        <h3 class="h5 fw-bold mb-2" style="color: #6BBEDA;">
-                            3. ความกล้าหาญในการเป็นตัวเอง
-                        </h3>
-                        <p class="kodchasan-regular mb-0 fw-medium text-white" style="line-height: 1.8;">
-                            การยอมรับและภาคภูมิใจในสิ่งที่ตัวเองเป็น แม้จะแตกต่างจากผู้อื่น ต้องใช้ความกล้าหาญยิ่งใหญ่ เพราะทุกคนล้วนมีความแตกต่างในตัวเองและนั่นคือสิ่งที่ทำให้ทุกคนมหัศจรรย์
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ข้อคิดที่ 4 -->
-            <div class="col-md-6" data-aos="fade-up" data-aos-duration="1800">
-                <div class="p-4 rounded-4 text-white h-100 shadow d-flex align-items-center gap-3" style="background-color: #0B192C;">
-                    <img src="images/อุปสรรค.png" alt="Empathy Icon" class="flex-shrink-0" style="width: 75px; height: 75px; object-fit: contain;">
-                    <div>
-                        <h3 class="h5 fw-bold mb-2" style="color: #6BBEDA;">
-                            4. ทุกคนต่างต่อสู้กับปัญหาของตัวเอง
-                        </h3>
-                        <p class="kodchasan-regular mb-0 fw-medium text-white" style="line-height: 1.8;">
-                            ทุกคนที่เราพบเจอกำลังต่อสู้กับอุปสรรคในชีวิตที่คนอื่นอาจไม่เคยรู้ การเห็นอกเห็นใจกันจึงเป็นสิ่งสำคัญที่สุดในสังคม
-                        </p>
-                    </div>
-                </div>
-            </div>
-
         </div>
-
-    </div>
-
-    <!-- SVG คลื่น 2 ชั้นสลับสี (เหลือง -> กรมท่า -> ฟ้า) เชื่อมไปหา Footer ด้านล่าง -->
-    <div class="w-100 overflow-hidden position-absolute bottom-0 start-0" style="line-height: 0; margin-bottom: -1px;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120" preserveAspectRatio="none" style="position: relative; display: block; width: 100%; height: 60px;">
-            <!-- คลื่นชั้นแรก สีกรมท่า (#0B192C) เพิ่มมิติแบบ Layer -->
-            <path d="M0,32 C320,90 960,10 1440,50 L1440,120 L0,120 Z" fill="#0B192C" opacity="0.4"></path>
-            <!-- คลื่นชั้นหลัก สีฟ้า (#6BBEDA) เชื่อมลงสู่ Footer -->
-            <path d="M0,60 C480,130 960,20 1440,70 L1440,120 L0,120 Z" fill="#6BBEDA"></path>
-        </svg>
-    </div>
-
-</section>
-</main>
-
-<!-- Footer (พื้นหลังสีฟ้าสดใส #6BBEDA พร้อมข้อความสีกรมท่าเข้ม #0B192C คอนทราสต์อ่านง่ายผ่านเกณฑ์ WCAG) -->
-<footer id="contact" class="py-5" style="background-color: #6BBEDA;">
-    <div class="container py-4">
-        <div class="text-center px-3 my-2">
-            
-            <!-- ประโยคคำคมหลัก -->
-            <p class="kodchasan-regular text-center fs-3 fw-bold mb-3" 
-               style="line-height: 1.8; color: #0B192C;"
-               data-aos="fade-up" 
-               data-aos-duration="1000"
-               data-aos-once="true">
-                "ออกัสต์ไม่สามารถเปลี่ยนรูปลักษณ์เขาได้ แต่พวกเราอาจเปลี่ยนวิธีการมองของพวกเราได้"
-            </p>
-
-            <!-- สรุปเนื้อหาเพิ่มเติม -->
-            <p class="kodchasan-regular text-center fs-4 fw-medium mb-0" 
-               style="line-height: 1.8; color: #0B192C;"
-               data-aos="fade-up" 
-               data-aos-duration="1000" 
-               data-aos-delay="300"
-               data-aos-once="true">
-                เรื่องราวของออกัสต์ พูลล์แมน ไม่เพียงแต่วาดภาพความกล้าหาญของเด็กชายคนหนึ่ง แต่ยังเตือนใจให้พวกเราเรียนรู้ที่จะมองทะลุผ่านรูปลักษณ์ภายนอก เปิดใจยอมรับความแตกต่าง และเลือกที่จะใจดีกับผู้คนรอบข้างในทุก ๆ วัน
-            </p>
-
-        </div>
-    </div>
-</footer>
+    </footer>
 
 
 

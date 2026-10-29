@@ -159,7 +159,7 @@ body {
     align-items: center;
 
     background-color: var(--bg-hero);
-    background-image: url('../images/bg.png');
+    background-image: url('../images/bg.webp');
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
