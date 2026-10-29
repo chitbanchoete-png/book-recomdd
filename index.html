@@ -350,8 +350,8 @@
 </div>
     </section>
 
-    <!-- Section: ต้องมีพื้นฐานอะไรไหม (พื้นหลังสีกรมท่าเข้ม #0B192C) -->
-<section id="prerequisite" class="position-relative pt-0 pb-5" style="background-color: #0B192C; color: #FFFFFF;">
+<!-- Section: ต้องมีพื้นฐานอะไรไหม (พื้นหลังสีกรมท่าเข้ม #0B192C) -->
+<section id="prerequisite" class="position-relative pt-0 pb-5 overflow-hidden" style="background-color: #0B192C; color: #FFFFFF;">
     
     <!-- SVG คลื่นเชื่อมต่อจากเซคชั่นสีฟ้า #6BBEDA ด้านบน -->
     <div class="w-100 overflow-hidden" style="line-height: 0; margin-bottom: -1px;">
@@ -362,29 +362,28 @@
 
     <div class="container py-4">
         
-        <!-- แถวบน: หัวข้อซ้าย (คำว่า พื้นฐานที่จำเป็น) และหัวข้อย่อยฝั่งขวา -->
-<!-- แถวบน: หัวข้อซ้าย (พร้อมรูป wonder.png ประกบซ้าย-ขวา) และข้อความฝั่งขวา -->
-<div class="row mb-4 align-items-center text-center text-md-start">
-    
-    <!-- ฝั่งซ้าย: หัวข้อหลัก -->
-    <div class="col-lg-5 col-md-5">
-        <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-3 mb-2" data-aos="fade-right" data-aos-duration="1000">
-            <img src="images/wonder.png" alt="Wonder Decor Left" style="height: 2.2em; width: auto; object-fit: contain;">
-            <h2 class="chonburi dexter mb-0 text-nowrap" style="color: #6BBEDA;">
-                พื้นฐานที่จำเป็น
-            </h2>
-            <img src="images/wonder.png" alt="Wonder Decor Right" style="height: 2.2em; width: auto; object-fit: contain;">
+        <!-- แถวบน: หัวข้อซ้าย (พร้อมรูป wonder.png ประกบซ้าย-ขวา) และข้อความฝั่งขวา -->
+        <div class="row mb-4 align-items-center text-center text-md-start g-3">
+            
+            <!-- ฝั่งซ้าย: หัวข้อหลัก (อยู่บรรทัดเดียว + ย่อขยายพอดีจอ) -->
+            <div class="col-lg-6 col-md-6">
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2 gap-sm-3 mb-2" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="images/wonder.png" alt="Wonder Decor Left" style="height: clamp(1.5rem, 4.5vw, 2.7rem); width: auto; object-fit: contain;">
+                    <h2 class="chonburi dexter mb-0 fw-bold" style="color: #6BBEDA; font-size: clamp(1.5rem, 4.5vw, 2.7rem); white-space: nowrap; line-height: 1.2;">
+                        พื้นฐานที่จำเป็น
+                    </h2>
+                    <img src="images/wonder.png" alt="Wonder Decor Right" style="height: clamp(1.5rem, 4.5vw, 2.7rem); width: auto; object-fit: contain;">
+                </div>
+            </div>
+
+            <!-- ฝั่งขวา: ข้อความอธิบาย -->
+            <div class="col-lg-6 col-md-6 mt-3 mt-md-0">
+                <h5 class="h5 fw-bold kodchasan-regular mb-0 text-white" style="line-height: 1.6; word-break: break-word;" data-aos="fade-left" data-aos-duration="1000">
+                    หนังสือเรื่อง <span style="color: #6BBEDA;">WONDER</span> ชีวิตมหัศจรรย์ของออกัสต์ <span style="color: #6BBEDA;">ไม่จำเป็นต้องมีพื้นฐานใด ๆ</span> ก่อนก็สามารถหยิบมาอ่านแล้วเข้าใจและอินตามได้ สามารถอ่านได้ง่ายและไม่ต้องเตรียมตัวล่วงหน้า
+                </h5>
+            </div>
+
         </div>
-    </div>
-
-    <!-- ฝั่งขวา: ข้อความอธิบาย -->
-    <div class="col-lg-7 col-md-7 mt-3 mt-md-0">
-        <h5 class="h5 fw-bold kodchasan-regular mb-0 text-white" style="line-height: 1.6;" data-aos="fade-left" data-aos-duration="1000">
-            หนังสือเรื่อง <span style="color: #6BBEDA;">WONDER</span> ชีวิตมหัศจรรย์ของออกัสต์ <span style="color: #6BBEDA;">ไม่จำเป็นต้องมีพื้นฐานใด ๆ</span> ก่อนก็สามารถหยิบมาอ่านแล้วเข้าใจและอินตามได้ สามารถอ่านได้ง่ายและไม่ต้องเตรียมตัวล่วงหน้า
-        </h5>
-    </div>
-
-</div>
 
         <!-- แถวกลาง: รูปภาพปกหนังสือฝั่งซ้าย + การ์ด 3 ชั้นฝั่งขวา -->
         <div class="row g-4 align-items-center mb-5">
@@ -399,30 +398,31 @@
                 <div class="d-flex flex-column gap-3">
 
                     <!-- การ์ดที่ 1 -->
-                    <div class="p-4 rounded-4 bg-white text-dark shadow-sm" data-aos="fade-left" data-aos-duration="1200">
-                        <h4 class="h5 fw-bold mb-2" style="color: #0B192C;">
+                    <div class="p-3 p-sm-4 rounded-4 bg-white text-dark shadow-sm" data-aos="fade-left" data-aos-duration="1200">
+                        <h4 class="h5 fw-bold mb-2" style="color: #0B192C; word-break: break-word;">
                             1. เข้าใจง่าย ไม่ซับซ้อน
                         </h4>
-                        <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8;">
+                        <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8; word-break: break-word;">
                             เป็นวรรณกรรมเยาวชน ที่ใช้ภาษาเป็นกันเอง เนื้อหาตรงไปตรงมาสอนข้อคิดให้กับผู้อ่าน
                         </p>
                     </div>
 
                     <!-- การ์ดที่ 2 -->
-                    <div class="p-4 rounded-4 bg-white text-dark shadow-sm" data-aos="fade-left" data-aos-duration="1400">
-                        <h4 class="h5 fw-bold mb-2" style="color: #0B192C;">
+                    <div class="p-3 p-sm-4 rounded-4 bg-white text-dark shadow-sm" data-aos="fade-left" data-aos-duration="1400">
+                        <h4 class="h5 fw-bold mb-2" style="color: #0B192C; word-break: break-word;">
                             2. เล่าผ่านมุมมองตัวละคร 
                         </h4>
-                        <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8;">
+                        <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8; word-break: break-word;">
                             หนังสือแบ่งบทการเล่าเรื่องผ่านสายตาของตัวละครต่าง ๆ เช่น ออกัสต์ (ตัวเอก), พี่สาว (โอลิเวีย), เพื่อนสนิท (แจ็ค วิลล์) ทำให้เราเข้าใจความรู้สึกและความคิด การเปลี่ยนมุมมองและพัฒนาการต่าง ๆ ที่แสดงให้เห็นถึงความแตกต่างของตัวละคร
-</p>
-</div>
+                        </p>
+                    </div>
+
                     <!-- การ์ดที่ 3 -->
-                    <div class="p-4 rounded-4 bg-white text-dark shadow-sm" data-aos="fade-left" data-aos-duration="1600">
-                        <h4 class="h5 fw-bold mb-2" style="color: #0B192C;">
+                    <div class="p-3 p-sm-4 rounded-4 bg-white text-dark shadow-sm" data-aos="fade-left" data-aos-duration="1600">
+                        <h4 class="h5 fw-bold mb-2" style="color: #0B192C; word-break: break-word;">
                             3. ประเด็นที่เป็นเรื่องใกล้ตัว
                         </h4>
-                        <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8;">
+                        <p class="kodchasan-regular mb-0 text-dark fw-medium" style="line-height: 1.8; word-break: break-word;">
                             หัวข้อหลักของเรื่องเกี่ยวกับเรื่องการไปโรงเรียนวันแรก การหาเพื่อนใหม่ การถูกกลั่นแกล้ง และความสัมพันธ์ในครอบครัว ซึ่งเป็นประสบการณ์ที่ทุกคนคุ้นเคยในชีวิตประจำวันอยู่แล้ว
                         </p>
                     </div>
@@ -433,15 +433,14 @@
         </div>
 
         <!-- แถวล่างสุด: ข้อความสรุปปิดท้ายกึ่งกลาง -->
-        <div class="text-center pt-2" data-aos="fade-up" data-aos-duration="1800">
-            <p class="kodchasan-regular fs-5 mb-0" style="color: #6BBEDA; line-height: 1.8;">
+        <div class="text-center pt-2 px-2" data-aos="fade-up" data-aos-duration="1800">
+            <p class="kodchasan-regular fs-5 mb-0" style="color: #6BBEDA; line-height: 1.8; word-break: break-word;">
                ไม่ว่าจะเป็นเด็ก วัยรุ่น พ่อแม่ หรือผู้ใหญ่ทั่วไป ก็สามารถเริ่มอ่านแล้วสนุกไปกับเรื่องราว พร้อมรับพลังบวกและความซาบซึ้งได้ในทันที
             </p>
         </div>
 
     </div>
 </section>
-
 <!-- Section: ข้อคิดจากเรื่องนี้ (พื้นหลังสีเหลืองทอง #F3C623) -->
 <section id="thought" class="position-relative pt-0 pb-5" style="background-color: #F3C623; color: #0B192C;">
     
