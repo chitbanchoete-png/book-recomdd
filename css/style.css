@@ -685,3 +685,107 @@ html {
 html {
     scroll-behavior: smooth;
 }
+
+/* ==========================================
+   HERO BUTTON ANIMATIONS
+========================================== */
+
+.hero-bottom-btn {
+    position: absolute;
+    bottom: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: max-content;
+    max-width: calc(100% - 32px);
+    min-height: 52px;
+    padding: 12px 28px;
+
+    background-color: #6BBEDA;
+    color: #000000;
+    border: 2px solid #6BBEDA;
+    border-radius: 50px;
+
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+    /* ใส่ Animation เด้งเบาๆ + เงาเรืองแสง */
+    animation: floatBounce 2.5s ease-in-out infinite;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* เอฟเฟกต์เมื่อวางเมาส์ (Hover) */
+.hero-bottom-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+    
+    /* หยุด animation ลอยเมื่อเอาเมาส์ชี้ แล้วยกปุ่มขึ้นเล็กน้อย */
+    animation-play-state: paused;
+    transform: translateX(-50%) translateY(-8px) scale(1.03);
+
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.6),
+                0 0 20px rgba(107, 190, 218, 0.8);
+}
+
+/* แอนิเมชันลูกศรขยับชี้ลง */
+.hero-bottom-btn span[aria-hidden="true"] {
+    display: inline-block;
+    animation: arrowDown 1.5s ease-in-out infinite;
+}
+
+/* ==========================================
+   KEYFRAMES
+========================================== */
+
+/* Keyframe สำหรับตัวปุ่ม (ลอยขึ้นลง + เงากระพริบ) */
+@keyframes floatBounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+        box-shadow: 0 5px 20px rgba(107, 190, 218, 0.4);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+        box-shadow: 0 15px 25px rgba(107, 190, 218, 0.7);
+    }
+}
+
+/* Keyframe สำหรับลูกศรชี้ลง */
+@keyframes arrowDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(4px);
+    }
+}
+
+/* ==========================================
+   RESPONSIVE ADJUSTMENTS
+========================================== */
+@media (max-width: 991.98px) {
+    .hero-bottom-btn {
+        bottom: 45px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-bottom-btn {
+        bottom: 30px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
